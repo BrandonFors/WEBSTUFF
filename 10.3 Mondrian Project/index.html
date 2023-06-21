@@ -6,6 +6,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mondrian Project</title>
   <style>
+    .display{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    .painting{
+      height: 748px;
+      width: 748px;
+      display: grid;
+      background-color: #000;
+      grid-template-columns: 320px 198px 153px 50px;
+      grid-template-rows: 414px 130px 155px 22px;
+      gap: 9px;
+      
+    }
+    .red-box{
+      background-color: red;
+    }
+    .white1{
+      background-color: #F0F1EC;
+      grid-column: span 3;
+    }
+    .white2{
+      background-color: #F0F1EC;
+      grid-row: span 2;
+    }
+    .white3{
+      background-color: #F0F1EC;
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    .blue-box{
+      background-color: #004592;
+      border-bottom: 10px;
+    }
+    .white4{
+      background-color: #F0F1EC;
+      grid-row: span 2;
+    }
+    .white5{
+      background-color: #F0F1EC;
+      
+    }
+    .yellow-box{
+      background-color: #F9D01E;
+    }
+    .gray-box{
+      background-color: #232629;
+    }
     /* 
     Write your CSS here 
     Gap Colour: #000
@@ -24,6 +76,22 @@
 
 <body>
   <!-- Write your HTML here -->
+  <div class = "display">
+    <div class = "painting">
+      <div class = "red-box"></div>
+      <div class = "white1"></div>
+      <div class = "white2"> </div>
+      <div class = "white3"> </div>
+      <div class = "blue-box"> </div>
+      <div class = "white4"> </div>
+      <div class = "white5"> </div>
+      <div class = "yellow-box"> </div>
+      <div class = "gray-box"> </div>
+
+
+    </div>
+
+  </div>
 </body>
 
 </html>
