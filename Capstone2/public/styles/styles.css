@@ -1,0 +1,21 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+h1{
+    color:blue;
+}
+.task{
+    display: flex;
+    margin: 20px 20px;
+    justify-content: center;
+}
+.header{
+    display: flex;
+    justify-content: flex-start;
+}
+.strikethrough:checked{
+    text-decoration:line-through;
+  }

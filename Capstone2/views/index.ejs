@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    
+    <div class = "container">
+        <%- include("partials/header.ejs") %>
+
+        <h1>TO DO LIST: <%= title %></h1>
+        <% if(locals.tasks){%>
+            <% console.log("yup") %>
+            <% for(x=0;x<tasks.length;x++){ %>
+                <div class = "task">
+                    <input type="checkbox">
+                    <h2><%=tasks[x] %></h2>
+                </div>
+            <% } %>
+        <% } %>
+        <form action="<%=listType%>" method="POST">
+            <input type = "text" name="task" value = "">
+            <input type="submit" value="+">
+        </form>
+    </div>
+</body>
+</html>
