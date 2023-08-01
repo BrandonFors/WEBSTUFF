@@ -16,6 +16,8 @@ h1{
     display: flex;
     justify-content: flex-start;
 }
-.strikethrough:checked{
-    text-decoration:line-through;
-  }
+
+input:checked + h2 {
+    text-decoration: line-through;
+    text-decoration-color: blue;
+}
