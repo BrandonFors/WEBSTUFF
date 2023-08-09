@@ -11,20 +11,26 @@
     <div class = "container">
         <%- include("partials/header.ejs") %>
 
-        <h1>TO DO LIST: <%= title %></h1>
+        <div class = "heading box">
+            <h1>TO DO LIST: <%= title %></h1>
+        </div>
+        
         <% if(locals.tasks){%>
             <% console.log("yup") %>
-            <% for(x=0;x<tasks.length;x++){ %>
-                <div class = "task">
-                    <input type="checkbox">
-                    <h2 class = "input"><%=tasks[x] %></h2>
-                </div>
-            <% } %>
+            <div class = "box">
+                <% for(x=0;x<tasks.length;x++){ %>
+                    <div class = "task">
+                        <input type="checkbox">
+                        <h2 class = "input"><%=tasks[x] %></h2>
+                    </div>
+                <% } %>
+                <form class = "task" action="<%=listType%>" method="POST">
+                    <input type = "text" name="task" value = "" placeholder="New Task">
+                    <input type="submit" value="+">
+                </form>
+            </div>
         <% } %>
-        <form action="<%=listType%>" method="POST">
-            <input type = "text" name="task" value = "">
-            <input type="submit" value="+">
-        </form>
+        
     </div>
 </body>
 </html>
