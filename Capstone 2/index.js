@@ -11,7 +11,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/",(req,res) =>{
-    res.render("index.ejs" , {listType: "/", title: new Date().getDate()+"-"+new Date().getMonth() + "-"+ new Date().getFullYear(), tasks: todayTaskList});
+    res.render("index.ejs" , {listType: "/", title: new Date().getDate()+"-"+(new Date().getMonth()+1) + "-"+ new Date().getFullYear(), tasks: todayTaskList});
     console.log("get");
 });
 
@@ -19,7 +19,7 @@ app.get("/",(req,res) =>{
 app.post("/",(req,res) =>{
     todayTaskList.push(req.body["task"]);
     console.log(todayTaskList);
-    res.render("index.ejs", {listType: "/", title: new Date().getDate()+"-"+new Date().getMonth() + "-"+ new Date().getFullYear(), tasks: todayTaskList});
+    res.render("index.ejs", {listType: "/", title: new Date().getDate()+"-"+(new Date().getMonth()+1) + "-"+ new Date().getFullYear(), tasks: todayTaskList});
 });
 
 app.get("/work", (req,res) =>{
